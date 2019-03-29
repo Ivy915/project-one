@@ -1,0 +1,45 @@
+Use Case UC-1:User Registration
+Related Requirements:REQ-1, REQ-3,REQ-12
+Initiating Actor: User, Software
+Actor¡¯s Goal: To create a new user account and allow the use of self-contained cabinets 
+Participating Actors: User, Memorizer, 
+Preconditions: The system displays the menu of available functions.
+            At the application the menu choice is Registration.
+Flow of Events for Main Success Scenario:
+----->User opens the application and selects the menu item ¡±Registration¡±.
+include::User registration(UC-1), Data processing(UC-5)
+<-----a: system provide registration information order to fill out
+----->b: the user fill in the personal information
+<-----c: system verify the account
+<-----d: system send the registration success or not to user
+----->e:data storage
+
+
+Use Case UC-2£ºRemove User
+Related Requirements:REQ-2
+Initiating Actor: User, Software
+Actor¡¯s Goal: Delete user accounts and clear user data
+Participating Actors: User, Memorizer, 
+Preconditions: The system displays the menu of available functions.
+            At the application the menu choice is Remove
+Flow of Events for Main Success Scenario:
+----->User opens the application and selects the menu item ¡±Remove¡±.
+include::Remove user(UC-2)
+<-----a: The system prompts the user to confirm whether to clear the user information
+----->b: The user confirms to clear personal data from the database
+<-----c: system verify the account
+<-----d: The system sends a clear success message to the user
+----->e£ºData to remove
+
+
+UC-3: Login: Users log in with registered account passwords.
+Related Requirement¡¯s:REQ1-REQ12.table1-2
+Initiating Actor: Any of: senders, recipients
+Actor¡¯s Goal: achieve the process of the log in, log out and registration.
+Participating Actors: data process control, system, information system
+Preconditions: none
+Post conditions: achieve the process of what the users want to get.
+Flow of Events for Main Success Scenario: 
+---->a. Users enter the login page and enter their account number and password for login.
+<---b. The system receives the order and feedback to the users.
+
